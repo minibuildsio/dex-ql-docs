@@ -1,0 +1,4 @@
+[[main]]
+  name = "Docs"
+  url = "/docs/introduction/getting-started/"
+  weight = 10
