@@ -1,7 +1,7 @@
 ---
 title: "Getting Started"
-description: "Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize."
-lead: "Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize."
+description: ""
+lead: ""
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false
@@ -13,43 +13,24 @@ weight: 100
 toc: true
 ---
 
-## Get started
+DexQL is a query language to query a dataset and create a dashboard from the data. It is based on [Kusto Query Language](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/).
 
-There are two main ways to get started with Doks:
+A DexQL script consists of statements that transform, filter, and summarise a data set. The statements are strung together by pipes similar to Unix pipes.
 
-### Tutorial
+## Example
 
-{{< alert icon="👉" text="The Tutorial is intended for novice to intermediate users." />}}
+| date | steps |
+| --- | --- |
+| 2023-01-01 | 15568 |
+| 2023-01-02 | 12473 |
+| ... | ... |
 
-Step-by-step instructions on how to start a new Doks project. [Tutorial →](https://getdoks.org/tutorial/introduction/)
+The example script below reads from the `Steps` table, filters out rows before 2023-01-01, adds a calculated field called months then sums up steps by month. 
 
-### Quick Start
-
-{{< alert icon="👉" text="The Quick Start is intended for intermediate to advanced users." />}}
-
-One page summary of how to start a new Doks project. [Quick Start →]()
-
-## Go further
-
-Recipes, Reference Guides, Extensions, and Showcase.
-
-### Recipes
-
-Get instructions on how to accomplish common tasks with Doks. [Recipes →](https://getdoks.org/docs/recipes/project-configuration/)
-
-### Reference Guides
-
-Learn how to customize Doks to fully make it your own. [Reference Guides →](https://getdoks.org/docs/reference-guides/security/)
-
-### Extensions
-
-Get instructions on how to add even more to Doks. [Extensions →](https://getdoks.org/docs/extensions/breadcrumb-navigation/)
-
-### Showcase
-
-See what others have build with Doks. [Showcase →](https://getdoks.org/showcase/electric-blocks/)
-
-## Contributing
-
-Find out how to contribute to Doks. [Contributing →](https://getdoks.org/docs/contributing/how-to-contribute/)
-
+```
+Steps
+| where date >= '2023-07-03'
+| extend week = beginning_of_week(date)
+| summarise steps = sum(steps) by week
+```
+![A chart of total steps by week](/images/dexql-chart.png)

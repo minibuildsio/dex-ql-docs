@@ -1,28 +1,14 @@
-name: Hyas CI
+name: Hugo CI
 
-on:
-  push:
-    branches: master
-  pull_request:
-    branches: master
+on: [push]
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [16.x, 18.x]
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Check out Hyas project
+    - name: Check out project
       uses: actions/checkout@v2
-
-    - name: Set up Node.js ${{ matrix.node }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node }}
 
     - name: Install dependencies
       run: npm ci
@@ -32,3 +18,9 @@ jobs:
 
     - name: Build production website
       run: npm run build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
