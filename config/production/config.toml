@@ -1,1 +1,2 @@
-canonifyURLs = false
+canonifyURLs = true
+baseurl = "https://minibuildsio.github.io/dex-ql-docs/"
