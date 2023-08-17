@@ -1,4 +1,4 @@
-baseurl = "https://minibuildsio.github.io/"
+baseurl = "https://minibuildsio.github.io/dex-ql-docs"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
