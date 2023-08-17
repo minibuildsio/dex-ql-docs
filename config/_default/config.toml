@@ -1,5 +1,5 @@
 baseurl = "https://minibuildsio.github.io/dex-ql-docs"
-canonifyURLs = false
+canonifyURLs = true
 disableAliases = true
 disableHugoGeneratorInject = true
 enableEmoji = true

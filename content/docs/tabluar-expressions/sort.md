@@ -1,12 +1,10 @@
 ---
 title: "sort"
-date: 2020-10-06T08:48:57+00:00
-lastmod: 2020-10-06T08:48:57+00:00
 draft: false
 images: []
 menu:
   docs:
-    parent: "tabluar-expressions"
+    parent: "tabular-expressions"
 weight: 100
 toc: true
 ---
@@ -28,7 +26,7 @@ sort Column [Order]
 
 ## Example
 
-The following example will sort the table by the steps column in .
+The following example will sort the table by the date column in descending order i.e. most recent first.
 
 ```
 Steps
