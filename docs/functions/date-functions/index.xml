@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Date Functions on</title><link>https://minibuildsio.github.io/dex-ql-docs/docs/functions/date-functions/</link><description>Recent content in Date Functions on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="https://minibuildsio.github.io/dex-ql-docs/docs/functions/date-functions/index.xml" rel="self" type="application/rss+xml"/><item><title>beginning_of_year</title><link>https://minibuildsio.github.io/dex-ql-docs/docs/functions/date-functions/beginning-of-year/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://minibuildsio.github.io/dex-ql-docs/docs/functions/date-functions/beginning-of-year/</guid><description>Returns the beginning of the year of the provided date or now if no date is provided.
+Syntax #
+beginning_of_year([date]) Parameters #
+Name Type Required Description date date/datetime No A date. Defaults to now if not provided. Example #
+Steps | project year = beginning_of_year(date)</description></item><item><title>beginning_of_month</title><link>https://minibuildsio.github.io/dex-ql-docs/docs/functions/date-functions/beginning-of-month/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://minibuildsio.github.io/dex-ql-docs/docs/functions/date-functions/beginning-of-month/</guid><description>Returns the beginning of the month of the provided date or now if not date is provided.
+Syntax #
+beginning_of_month([date]) Parameters #
+Name Type Required Description date date/datetime No A date. Defaults to now if not provided. Example #
+Steps | project month = beginning_of_month(date)</description></item><item><title>beginning_of_week</title><link>https://minibuildsio.github.io/dex-ql-docs/docs/functions/date-functions/beginning-of-week/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://minibuildsio.github.io/dex-ql-docs/docs/functions/date-functions/beginning-of-week/</guid><description>Returns the beginning of the week of the provided date or now if no date is provided.
+Monday is the beginning of the week.
+Syntax #
+beginning_of_week([date]) Parameters #
+Name Type Required Description date date/datetime No A date. Defaults to now if not provided. Example #
+Steps | project week = beginning_of_week(date)</description></item><item><title>format_date</title><link>https://minibuildsio.github.io/dex-ql-docs/docs/functions/date-functions/format-date/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://minibuildsio.github.io/dex-ql-docs/docs/functions/date-functions/format-date/</guid><description>Returns a string representation of a datetime using a provided format.
+Syntax #
+format_date(date, format) Parameters #
+Name Type Required Description date date/datetime Yes A date. format string Yes A format e.g. &amp;ldquo;yyyy-MM&amp;rdquo;, see table below. Supported Format Symbols #
+Symbol Meaning Presentation Examples G era number/text 1; 01; AD; Anno Domini u year year 2004; 04 y year-of-era year 2004; 04 D day-of-year number 189 M month-of-year number/text 7; 07; Jul; July; J d day-of-month number 10 Q quarter-of-year number/text 3; 03; Q3 Y week-based-year year 1996; 96 w week-of-year number 27 W week-of-month number 27 e localized day-of-week number 2; Tue; Tuesday; T E day-of-week number/text 2; Tue; Tuesday; T F week-of-month number 3 a am-pm-of-day text PM h clock-hour-of-am-pm (1-12) number 12 K hour-of-am-pm (0-11) number 0 k clock-hour-of-am-pm (1-24) number 0 H hour-of-day (0-23) number 0 m minute-of-hour number 30 s second-of-minute number 55 S fraction-of-second fraction 978 A milli-of-day number 1234 ' escape for text delimiter '' single quote literal ' Example #
+Steps | project year_month = format_date(date, &amp;quot;yyyy-MM&amp;quot;)</description></item></channel></rss>
