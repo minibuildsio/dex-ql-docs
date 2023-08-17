@@ -33,5 +33,5 @@ Steps
 | extend week = beginning_of_week(date)
 | summarise steps = sum(steps) by week
 ```
-![A chart of total steps by week](dexql-chart.webp)
+![A chart of total steps by week](https://minibuildsio.github.io/dex-ql-docs/docs/introduction/getting-started/dexql-chart.webp)
 
